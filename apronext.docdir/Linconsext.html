@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Generatorext.html">
+<link rel="next" href="Tconsext.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Environmentext" rel="Chapter" href="Environmentext.html">
+<link title="Generatorext" rel="Chapter" href="Generatorext.html">
+<link title="Linconsext" rel="Chapter" href="Linconsext.html">
+<link title="Tconsext" rel="Chapter" href="Tconsext.html">
+<link title="Domain" rel="Chapter" href="Domain.html">
+<link title="Apol" rel="Chapter" href="Apol.html">
+<link title="Abox" rel="Chapter" href="Abox.html">
+<link title="Aoct" rel="Chapter" href="Aoct.html"><link title="Type array" rel="Section" href="#3_Typearray">
+<link title="Extensions" rel="Section" href="#3_Extensions">
+<title>Linconsext</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Generatorext.html" title="Generatorext">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Tconsext.html" title="Tconsext">Next</a>
+</div>
+<h1>Module <a href="type_Linconsext.html">Linconsext</a></h1>
+
+<pre><span class="keyword">module</span> Linconsext: <code class="code">sig</code> <a href="Linconsext.html">..</a> <code class="code">end</code></pre><div class="info module top">
+This file is an extension for the Lincons1 module from the apron
+Library<br>
+</div>
+<hr width="100%">
+<br>
+Note : It only adds function, nothing is removed. Extensions are at
+the end of the module<br>
+
+<pre><span id="VALmake"><span class="keyword">val</span> make</span> : <code class="type">Apron.Linexpr1.t -> Apron.Lincons1.typ -> Apron.Lincons1.t</code></pre><div class="info ">
+Make a linear constraint. Modifying later the linear expression (<em>not
+  advisable</em>) modifies correspondingly the linear constraint and conversely,
+  except for changes of environements<br>
+</div>
+
+<pre><span id="VALcopy"><span class="keyword">val</span> copy</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons1.t</code></pre><div class="info ">
+Copy (deep copy)<br>
+</div>
+
+<pre><span id="VALstring_of_typ"><span class="keyword">val</span> string_of_typ</span> : <code class="type">Apron.Lincons1.typ -> string</code></pre><div class="info ">
+Convert a constraint type to a string (<code class="code">=</code>,<code class="code">&gt;=</code>, or <code class="code">&gt;</code>)<br>
+</div>
+
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> Apron.Lincons1.t -> unit</code></pre><div class="info ">
+Print the linear constraint<br>
+</div>
+
+<pre><span id="VALget_typ"><span class="keyword">val</span> get_typ</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons1.typ</code></pre><div class="info ">
+Get the constraint type<br>
+</div>
+
+<pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">(Apron.Coeff.t -> Apron.Var.t -> unit) -> Apron.Lincons1.t -> unit</code></pre><div class="info ">
+Iter the function on the pair coefficient/variable of the underlying linear
+  expression<br>
+</div>
+
+<pre><span id="VALget_cst"><span class="keyword">val</span> get_cst</span> : <code class="type">Apron.Lincons1.t -> Apron.Coeff.t</code></pre><div class="info ">
+Get the constant of the underlying linear expression<br>
+</div>
+
+<pre><span id="VALset_typ"><span class="keyword">val</span> set_typ</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons1.typ -> unit</code></pre><div class="info ">
+Set the constraint type<br>
+</div>
+
+<pre><span id="VALset_list"><span class="keyword">val</span> set_list</span> : <code class="type">Apron.Lincons1.t -><br>       (Apron.Coeff.t * Apron.Var.t) list -> Apron.Coeff.t option -> unit</code></pre><div class="info ">
+Set simultaneously a number of coefficients.
+<p>
+
+  <code class="code">set_list expr [(c1,"x"); (c2,"y")] (Some cst)</code> assigns coefficients <code class="code">c1</code>
+  to variable <code class="code">"x"</code>, coefficient <code class="code">c2</code> to variable <code class="code">"y"</code>, and coefficient <code class="code">cst</code>
+  to the constant. If <code class="code">(Some cst)</code> is replaced by <code class="code">None</code>,
+  the constant coefficient is not assigned.<br>
+</div>
+
+<pre><span id="VALset_array"><span class="keyword">val</span> set_array</span> : <code class="type">Apron.Lincons1.t -><br>       (Apron.Coeff.t * Apron.Var.t) array -> Apron.Coeff.t option -> unit</code></pre><div class="info ">
+Set simultaneously a number of coefficients, as <code class="code">set_list</code>.<br>
+</div>
+
+<pre><span id="VALset_cst"><span class="keyword">val</span> set_cst</span> : <code class="type">Apron.Lincons1.t -> Apron.Coeff.t -> unit</code></pre><div class="info ">
+Set the constant of the underlying linear expression<br>
+</div>
+
+<pre><span id="VALget_coeff"><span class="keyword">val</span> get_coeff</span> : <code class="type">Apron.Lincons1.t -> Apron.Var.t -> Apron.Coeff.t</code></pre><div class="info ">
+Get the coefficient of the variable in the underlying linear expression<br>
+</div>
+
+<pre><span id="VALset_coeff"><span class="keyword">val</span> set_coeff</span> : <code class="type">Apron.Lincons1.t -> Apron.Var.t -> Apron.Coeff.t -> unit</code></pre><div class="info ">
+Set the coefficient of the variable in the underlying linear expression<br>
+</div>
+
+<pre><span id="VALmake_unsat"><span class="keyword">val</span> make_unsat</span> : <code class="type">Apron.Environment.t -> Apron.Lincons1.t</code></pre><div class="info ">
+Build the unsatisfiable constraint -1&gt;=0<br>
+</div>
+
+<pre><span id="VALis_unsat"><span class="keyword">val</span> is_unsat</span> : <code class="type">Apron.Lincons1.t -> bool</code></pre><div class="info ">
+Is the constraint not satisfiable ?<br>
+</div>
+
+<pre><span id="VALextend_environment"><span class="keyword">val</span> extend_environment</span> : <code class="type">Apron.Lincons1.t -> Apron.Environment.t -> Apron.Lincons1.t</code></pre><div class="info ">
+Change the environement of the constraint for a super-environement. Raise <code class="code">Failure</code> if it is not the case<br>
+</div>
+
+<pre><span id="VALextend_environment_with"><span class="keyword">val</span> extend_environment_with</span> : <code class="type">Apron.Lincons1.t -> Apron.Environment.t -> unit</code></pre><div class="info ">
+Side-effect version of the previous function<br>
+</div>
+
+<pre><span id="VALget_env"><span class="keyword">val</span> get_env</span> : <code class="type">Apron.Lincons1.t -> Apron.Environment.t</code></pre><div class="info ">
+Get the environement of the linear constraint<br>
+</div>
+
+<pre><span id="VALget_linexpr1"><span class="keyword">val</span> get_linexpr1</span> : <code class="type">Apron.Lincons1.t -> Apron.Linexpr1.t</code></pre><div class="info ">
+Get the underlying linear expression. Modifying the linear expression (<em>  not advisable</em>) modifies correspondingly the linear constraint and
+  conversely, except for changes of environements<br>
+</div>
+
+<pre><span id="VALget_lincons0"><span class="keyword">val</span> get_lincons0</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons0.t</code></pre><div class="info ">
+Get the underlying linear constraint of level 0. Modifying the constraint
+  of level 0 (<em>not advisable</em>) modifies correspondingly the linear constraint
+  and conversely, except for changes of environements<br>
+</div>
+<br>
+<h3 id="3_Typearray">Type array</h3><br>
+
+<pre><span id="VALarray_make"><span class="keyword">val</span> array_make</span> : <code class="type">Apron.Environment.t -> int -> Apron.Lincons1.earray</code></pre><div class="info ">
+Make an array of linear constraints with the given size and defined on the
+  given environement. The elements are initialized with the constraint 0=0.<br>
+</div>
+
+<pre><span id="VALarray_print"><span class="keyword">val</span> array_print</span> : <code class="type">?first:(unit, Format.formatter, unit) Pervasives.format -><br>       ?sep:(unit, Format.formatter, unit) Pervasives.format -><br>       ?last:(unit, Format.formatter, unit) Pervasives.format -><br>       Format.formatter -> Apron.Lincons1.earray -> unit</code></pre><div class="info ">
+Print an array of constraints<br>
+</div>
+
+<pre><span id="VALarray_length"><span class="keyword">val</span> array_length</span> : <code class="type">Apron.Lincons1.earray -> int</code></pre><div class="info ">
+Get the size of the array<br>
+</div>
+
+<pre><span id="VALarray_get_env"><span class="keyword">val</span> array_get_env</span> : <code class="type">Apron.Lincons1.earray -> Apron.Environment.t</code></pre><div class="info ">
+Get the environment of the array<br>
+</div>
+
+<pre><span id="VALarray_get"><span class="keyword">val</span> array_get</span> : <code class="type">Apron.Lincons1.earray -> int -> Apron.Lincons1.t</code></pre><div class="info ">
+Get the element of the given index (which is not a copy)<br>
+</div>
+
+<pre><span id="VALarray_set"><span class="keyword">val</span> array_set</span> : <code class="type">Apron.Lincons1.earray -> int -> Apron.Lincons1.t -> unit</code></pre><div class="info ">
+Set the element of the given index (without any copy). The array and the
+  constraint should be defined on the same environement; otherwise a <code class="code">Failure</code>
+  exception is raised.<br>
+</div>
+
+<pre><span id="VALarray_extend_environment"><span class="keyword">val</span> array_extend_environment</span> : <code class="type">Apron.Lincons1.earray -> Apron.Environment.t -> Apron.Lincons1.earray</code></pre><div class="info ">
+Change the environement of the array of constraints for a super-environement. Raise <code class="code">Failure</code> if it is not the case<br>
+</div>
+
+<pre><span id="VALarray_extend_environment_with"><span class="keyword">val</span> array_extend_environment_with</span> : <code class="type">Apron.Lincons1.earray -> Apron.Environment.t -> unit</code></pre><div class="info ">
+Side-effect version of the previous function<br>
+</div>
+<br>
+<h3 id="3_Extensions">Extensions</h3><br>
+
+<pre><span id="VALneg_typ"><span class="keyword">val</span> neg_typ</span> : <code class="type">Apron.Lincons1.typ -> Apron.Lincons1.typ</code></pre><div class="info ">
+type of constraint negation<br>
+</div>
+
+<pre><span id="VALneg"><span class="keyword">val</span> neg</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons1.t</code></pre><div class="info ">
+constraints negation : constructs a new constraint in opposite
+direction.  e.g : a &gt;= b -&gt; a &lt; b<br>
+</div>
+
+<pre><span id="VALspliteq"><span class="keyword">val</span> spliteq</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons1.t * Apron.Lincons1.t</code></pre><div class="info ">
+Equality splitting : split a = b into a &gt;= b and a &lt;= b.
+ Raises Invalid_argument if the constraint is not an equality<br>
+</div>
+
+<pre><span id="VALsplitdiseq"><span class="keyword">val</span> splitdiseq</span> : <code class="type">Apron.Lincons1.t -> Apron.Lincons1.t * Apron.Lincons1.t</code></pre><div class="info ">
+Disequality splitting split a &lt;&gt; b into a &gt; b or a &lt; b,
+ Raises Invalid_argument if the constraint is not a disequality<br>
+</div>
+<br>
+Higher-order functions utilities<br>
+
+<pre><span id="VALarray_fold"><span class="keyword">val</span> array_fold</span> : <code class="type">('a -> Apron.Lincons1.t -> 'a) -> 'a -> Apron.Lincons1.earray -> 'a</code></pre><div class="info ">
+fold function over generator.earay<br>
+</div>
+
+<pre><span id="VALarray_iter"><span class="keyword">val</span> array_iter</span> : <code class="type">(Apron.Lincons1.t -> unit) -> Apron.Lincons1.earray -> unit</code></pre><div class="info ">
+iter function over generator.earay<br>
+</div>
+
+<pre><span id="VALarray_for_all"><span class="keyword">val</span> array_for_all</span> : <code class="type">(Apron.Lincons1.t -> bool) -> Apron.Lincons1.earray -> bool</code></pre><div class="info ">
+forall function over generator.earay<br>
+</div>
+
+<pre><span id="VALarray_exists"><span class="keyword">val</span> array_exists</span> : <code class="type">(Apron.Lincons1.t -> bool) -> Apron.Lincons1.earray -> bool</code></pre><div class="info ">
+exists function over generator.earay<br>
+</div>
+
+<pre><span id="VALarray_to_list"><span class="keyword">val</span> array_to_list</span> : <code class="type">Apron.Lincons1.earray -> Apron.Lincons1.t list</code></pre><div class="info ">
+to list conversion<br>
+</div>
+
+<pre><span id="VALarray_of_list"><span class="keyword">val</span> array_of_list</span> : <code class="type">Apron.Lincons1.t list -> Apron.Lincons1.earray</code></pre><div class="info ">
+of list build<br>
+</div>
+</body></html>

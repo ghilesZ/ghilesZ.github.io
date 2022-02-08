@@ -1,0 +1,34 @@
+<html>
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>AbSolute</title>
+    <script src="solver.js"></script>
+    <link rel="stylesheet" type="text/css" href="absolute.css">
+	</head>
+	<body>
+    <form>
+      <fieldset>
+        <legend> Options </legend>
+        <label for="domain"> Abstract Domain : </label>
+        <select id="domain" name="domain">
+          <option value="box" selected>Boxes with only large constraints </option>
+          <option value="boxS" >Boxes with strict and large inequalities </option>
+        </select>
+
+        <label for="precision">  Precison : </label>
+        <textarea name="precision" id="precision" cols="5" rows="1">0.1 </textarea>
+      </fieldset>
+      <fieldset>
+        <legend> Write you problem here </legend>
+        <textarea id="text" cols="50" rows="40"></textarea>
+        <label for="problem" > you can also select one of the predefined examples : </label>
+        <select id="problem" name="problem">
+          <option value="noone"> ... </option>
+          <option value="mickey"> mickey </option>
+          <option value="question"> question </option>
+        </select>
+        <input id="solve" type="button" value="solve">
+      </fieldset>
+      <canvas id="canvas" width="500" height="500"></canvas>
+    </form>
+  </body>
+</html>

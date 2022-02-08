@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="Up" href="Apol.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Environmentext" rel="Chapter" href="Environmentext.html">
+<link title="Generatorext" rel="Chapter" href="Generatorext.html">
+<link title="Linconsext" rel="Chapter" href="Linconsext.html">
+<link title="Tconsext" rel="Chapter" href="Tconsext.html">
+<link title="Domain" rel="Chapter" href="Domain.html">
+<link title="Apol" rel="Chapter" href="Apol.html">
+<link title="Abox" rel="Chapter" href="Abox.html">
+<link title="Aoct" rel="Chapter" href="Aoct.html"><title>Apol.Domain</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="Apol.html" title="Apol">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Apol.Domain.html">Apol.Domain</a></h1>
+
+<pre><span class="keyword">module</span> Domain: <code class="type"><a href="Domain.Make.html">Domain.Make</a></code><code class="code">(</code><code class="code">sig</code><div class="sig_block">
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">Polka.strict Polka.t</code> </pre>
+
+
+<pre><span id="VALman"><span class="keyword">val</span> man</span> : <code class="type">Polka.strict Polka.t Apron.Manager.t</code></pre></div><code class="code">end</code><code class="code">)</code></pre><hr width="100%">
+<br>
+This functor implements all the constraint/generator based
+operations over abstract elements. These are generic and stand for
+Boxes, Octagons and Polyhedra.<br>
+<br>
+Conventions :<ul>
+<li>functions ending with _s allow to use/return string instead of variables</li>
+<li>functions ending with _f allow to use/return float instead of apron scalar</li>
+<li>functions ending with _fs mix the two</li>
+</ul>
+<br>
+
+<pre><span class="keyword">module</span> <a href="Domain.Make.A.html">A</a>: <code class="type">Apron.Abstract1</code></pre>
+<pre><span class="keyword">module</span> <a href="Domain.Make.G.html">G</a>: <code class="type"><a href="Generatorext.html">Generatorext</a></code></pre>
+<pre><span class="keyword">module</span> <a href="Domain.Make.T.html">T</a>: <code class="type"><a href="Tconsext.html">Tconsext</a></code></pre>
+<pre><span class="keyword">module</span> <a href="Domain.Make.L.html">L</a>: <code class="type"><a href="Linconsext.html">Linconsext</a></code></pre>
+<pre><span class="keyword">module</span> <a href="Domain.Make.E.html">E</a>: <code class="type"><a href="Environmentext.html">Environmentext</a></code></pre>
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> = <code class="type">D.t A.t</code> </pre>
+
+
+<pre><span id="VALman"><span class="keyword">val</span> man</span> : <code class="type">D.t Apron.Manager.t</code></pre><br>
+Set-theoritic operations<br>
+
+<pre><span id="VALbottom"><span class="keyword">val</span> bottom</span> : <code class="type">Apron.Environment.t -> D.t A.t</code></pre>
+<pre><span id="VALtop"><span class="keyword">val</span> top</span> : <code class="type">Apron.Environment.t -> D.t A.t</code></pre>
+<pre><span id="VALjoin"><span class="keyword">val</span> join</span> : <code class="type">D.t A.t -> D.t A.t -> D.t A.t</code></pre>
+<pre><span id="VALmeet"><span class="keyword">val</span> meet</span> : <code class="type">D.t A.t -> D.t A.t -> D.t A.t</code></pre>
+<pre><span id="VALwidening"><span class="keyword">val</span> widening</span> : <code class="type">D.t A.t -> D.t A.t -> D.t A.t</code></pre><br>
+predicates<br>
+
+<pre><span id="VALis_bottom"><span class="keyword">val</span> is_bottom</span> : <code class="type">D.t A.t -> bool</code></pre>
+<pre><span id="VALis_top"><span class="keyword">val</span> is_top</span> : <code class="type">D.t A.t -> bool</code></pre>
+<pre><span id="VALis_leq"><span class="keyword">val</span> is_leq</span> : <code class="type">D.t A.t -> D.t A.t -> bool</code></pre>
+<pre><span id="VALis_eq"><span class="keyword">val</span> is_eq</span> : <code class="type">D.t A.t -> D.t A.t -> bool</code></pre><br>
+constraint satisfaction and filter<br>
+
+<pre><span id="VALsat_lincons"><span class="keyword">val</span> sat_lincons</span> : <code class="type">D.t A.t -> Apron.Lincons1.t -> bool</code></pre>
+<pre><span id="VALsat_tcons"><span class="keyword">val</span> sat_tcons</span> : <code class="type">D.t A.t -> Apron.Tcons1.t -> bool</code></pre>
+<pre><span id="VALfilter_lincons"><span class="keyword">val</span> filter_lincons</span> : <code class="type">D.t A.t -> Apron.Lincons1.t -> D.t A.t</code></pre>
+<pre><span id="VALfilter_tcons"><span class="keyword">val</span> filter_tcons</span> : <code class="type">D.t A.t -> Apron.Tcons1.t -> D.t A.t</code></pre><br>
+of and to constraints/generator<br>
+
+<pre><span id="VALto_lincons_array"><span class="keyword">val</span> to_lincons_array</span> : <code class="type">D.t A.t -> Apron.Lincons1.earray</code></pre>
+<pre><span id="VALto_tcons_array"><span class="keyword">val</span> to_tcons_array</span> : <code class="type">D.t A.t -> Apron.Tcons1.earray</code></pre>
+<pre><span id="VALto_generator_array"><span class="keyword">val</span> to_generator_array</span> : <code class="type">D.t A.t -> Apron.Generator1.earray</code></pre>
+<pre><span id="VALto_lincons_list"><span class="keyword">val</span> to_lincons_list</span> : <code class="type">D.t A.t -> Apron.Lincons1.t list</code></pre>
+<pre><span id="VALto_tcons_list"><span class="keyword">val</span> to_tcons_list</span> : <code class="type">D.t A.t -> Apron.Tcons1.t list</code></pre>
+<pre><span id="VALto_generator_list"><span class="keyword">val</span> to_generator_list</span> : <code class="type">D.t A.t -> Apron.Generator1.t list</code></pre>
+<pre><span id="VALof_generator_list"><span class="keyword">val</span> of_generator_list</span> : <code class="type">Apron.Environment.t -> Apron.Generator1.t list -> D.t A.t</code></pre>
+<pre><span id="VALof_generator_array"><span class="keyword">val</span> of_generator_array</span> : <code class="type">Apron.Environment.t -> Apron.Generator1.earray -> D.t A.t</code></pre>
+<pre><span id="VALof_lincons_array"><span class="keyword">val</span> of_lincons_array</span> : <code class="type">Apron.Environment.t -> Apron.Lincons1.earray -> D.t A.t</code></pre>
+<pre><span id="VALof_tcons_array"><span class="keyword">val</span> of_tcons_array</span> : <code class="type">Apron.Environment.t -> Apron.Tcons1.earray -> D.t A.t</code></pre>
+<pre><span id="VALof_lincons_list"><span class="keyword">val</span> of_lincons_list</span> : <code class="type">Apron.Environment.t -> Apron.Lincons1.t list -> D.t A.t</code></pre>
+<pre><span id="VALof_tcons_list"><span class="keyword">val</span> of_tcons_list</span> : <code class="type">Apron.Environment.t -> Apron.Tcons1.t list -> D.t A.t</code></pre><br>
+Environment and variable related operations<br>
+
+<pre><span id="VALchange_environment"><span class="keyword">val</span> change_environment</span> : <code class="type">D.t A.t -> Apron.Environment.t -> D.t A.t</code></pre>
+<pre><span id="VALassign_texpr"><span class="keyword">val</span> assign_texpr</span> : <code class="type">D.t A.t -> Apron.Var.t -> Apron.Texpr1.t -> D.t A.t</code></pre>
+<pre><span id="VALassign_linexpr"><span class="keyword">val</span> assign_linexpr</span> : <code class="type">D.t A.t -> Apron.Var.t -> Apron.Linexpr1.t -> D.t A.t</code></pre>
+<pre><span id="VALassign_f"><span class="keyword">val</span> assign_f</span> : <code class="type">D.t A.t -> Apron.Var.t -> float -> D.t A.t</code></pre>
+<pre><span id="VALassign_fs"><span class="keyword">val</span> assign_fs</span> : <code class="type">D.t A.t -> string -> float -> D.t A.t</code></pre>
+<pre><span id="VALadd_var"><span class="keyword">val</span> add_var</span> : <code class="type">D.t A.t -> Apron.Environment.typvar -> Apron.Var.t -> D.t A.t</code></pre>
+<pre><span id="VALadd_var_s"><span class="keyword">val</span> add_var_s</span> : <code class="type">D.t A.t -> Apron.Environment.typvar -> string -> D.t A.t</code></pre>
+<pre><span id="VALbound_variable"><span class="keyword">val</span> bound_variable</span> : <code class="type">D.t A.t -> Apron.Var.t -> Apron.Interval.t</code></pre>
+<pre><span id="VALbound_variable_f"><span class="keyword">val</span> bound_variable_f</span> : <code class="type">D.t A.t -> Apron.Var.t -> float * float</code></pre>
+<pre><span id="VALbound_variable_fs"><span class="keyword">val</span> bound_variable_fs</span> : <code class="type">D.t A.t -> string -> float * float</code></pre>
+<pre><span id="VALis_bounded"><span class="keyword">val</span> is_bounded</span> : <code class="type">D.t A.t -> 'a -> bool</code></pre>
+<pre><span id="VALis_bounded_s"><span class="keyword">val</span> is_bounded_s</span> : <code class="type">D.t A.t -> string -> bool</code></pre><br>
+Cross-domain conversion<br>
+
+<pre><span id="VALto_box"><span class="keyword">val</span> to_box</span> : <code class="type">D.t A.t -> Box.t A.t</code></pre>
+<pre><span id="VALto_oct"><span class="keyword">val</span> to_oct</span> : <code class="type">D.t A.t -> Oct.t A.t</code></pre>
+<pre><span id="VALto_poly"><span class="keyword">val</span> to_poly</span> : <code class="type">D.t A.t -> Polka.strict Polka.t A.t</code></pre><br>
+Printing<br>
+
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type">Format.formatter -> 'a A.t -> unit</code></pre></body></html>

@@ -1,0 +1,76 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Environmentext" rel="Chapter" href="Environmentext.html">
+<link title="Generatorext" rel="Chapter" href="Generatorext.html">
+<link title="Linconsext" rel="Chapter" href="Linconsext.html">
+<link title="Tconsext" rel="Chapter" href="Tconsext.html">
+<link title="Domain" rel="Chapter" href="Domain.html">
+<link title="Apol" rel="Chapter" href="Apol.html">
+<link title="Abox" rel="Chapter" href="Abox.html">
+<link title="Aoct" rel="Chapter" href="Aoct.html"><title>Generatorext</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;make&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Linexpr1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator0</span>.typ&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;copy&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_typ&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator0</span>.typ<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;iter&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Coeff</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_typ&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator0</span>.typ&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_list&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Coeff</span>.t&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t)&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;set_array&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Coeff</span>.t&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t)&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;get_coeff&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Coeff</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_generator1_ap_generator1_get_coeff"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;set_coeff&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Coeff</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_generator1_ap_generator1_set_coeff"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;extend_environment&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_generator1_ap_generator1_extend_environment"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;extend_environment_with&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_generator1_ap_generator1_extend_environment_with"</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_make&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_print&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?first:(unit,&nbsp;<span class="constructor">Format</span>.formatter,&nbsp;unit)&nbsp;<span class="constructor">Pervasives</span>.format&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?sep:(unit,&nbsp;<span class="constructor">Format</span>.formatter,&nbsp;unit)&nbsp;<span class="constructor">Pervasives</span>.format&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?last:(unit,&nbsp;<span class="constructor">Format</span>.formatter,&nbsp;unit)&nbsp;<span class="constructor">Pervasives</span>.format&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_length&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_get&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_set&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;array_extend_environment&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_generator1_ap_generator1_array_extend_environment"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;array_extend_environment_with&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_generator1_ap_generator1_array_extend_environment_with"</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_env&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_linexpr1&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Linexpr1</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_generator0&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator0</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;neg&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;to_float_array&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;array&nbsp;array<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;of_float_point&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;float&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_fold&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_iter&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_for_all&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_exists&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_to_list&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;list<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;array_of_list&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.t&nbsp;list&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Generator1</span>.earray<br>
+<span class="keyword">end</span></code></body></html>

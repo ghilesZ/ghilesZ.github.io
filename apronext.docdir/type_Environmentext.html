@@ -1,0 +1,99 @@
+<html><head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Index of module types" rel=Appendix href="index_module_types.html">
+<link title="Environmentext" rel="Chapter" href="Environmentext.html">
+<link title="Generatorext" rel="Chapter" href="Generatorext.html">
+<link title="Linconsext" rel="Chapter" href="Linconsext.html">
+<link title="Tconsext" rel="Chapter" href="Tconsext.html">
+<link title="Domain" rel="Chapter" href="Domain.html">
+<link title="Apol" rel="Chapter" href="Apol.html">
+<link title="Abox" rel="Chapter" href="Abox.html">
+<link title="Aoct" rel="Chapter" href="Aoct.html"><title>Environmentext</title>
+</head>
+<body>
+<code class="code"><span class="keyword">sig</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;make&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_make"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;add&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_add"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;remove&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_remove"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;rename&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_rename"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;rename_perm&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.perm<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_rename_perm"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;lce&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_lce"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;lce_change&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.change&nbsp;option&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.change&nbsp;option<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_lce_change"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;dimchange&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.change<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_dimchange"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;dimchange2&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.change2<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_dimchange2"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;equal&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_equal"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;compare&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_compare"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;hash&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_hash"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;dimension&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.dimension<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_dimension"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;size&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_size"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;mem_var&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_mem_var"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;typ_of_var&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.typvar<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_typ_of_var"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;vars&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_vars"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;var_of_dim&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_var_of_dim"</span><br>
+&nbsp;&nbsp;<span class="keyword">external</span>&nbsp;dim_of_var&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Dim</span>.t<br>
+&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;<span class="string">"camlidl_environment_ap_environment_dim_of_var"</span><br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;print&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;?first:(unit,&nbsp;<span class="constructor">Format</span>.formatter,&nbsp;unit)&nbsp;<span class="constructor">Pervasives</span>.format&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?sep:(unit,&nbsp;<span class="constructor">Format</span>.formatter,&nbsp;unit)&nbsp;<span class="constructor">Pervasives</span>.format&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;?last:(unit,&nbsp;<span class="constructor">Format</span>.formatter,&nbsp;unit)&nbsp;<span class="constructor">Pervasives</span>.format&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Format</span>.formatter&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;make_s&nbsp;:&nbsp;string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;string&nbsp;array&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;empty&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_one&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.typvar&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_one_s&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string&nbsp;*&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.typvar&nbsp;<span class="keywordsign">-&gt;</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_int&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_int_s&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_real&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;add_real_s&nbsp;:&nbsp;string&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;join&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;fold&nbsp;:&nbsp;(<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="keywordsign">'</span>a<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;iter&nbsp;:&nbsp;(<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit)&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;unit<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_ints&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array<br>
+&nbsp;&nbsp;<span class="keyword">val</span>&nbsp;get_reals&nbsp;:&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Environment</span>.t&nbsp;<span class="keywordsign">-&gt;</span>&nbsp;<span class="constructor">Apron</span>.<span class="constructor">Var</span>.t&nbsp;array<br>
+<span class="keyword">end</span></code></body></html>
