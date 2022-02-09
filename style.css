@@ -37,8 +37,8 @@ body {
 }
 
 
-li:nth-child(even) { background: #FFEEDD; }
-li:nth-child(odd) { background: #DDEEFF; }
+li:nth-child(even) { background: #EFEFFF; }
+li:nth-child(odd) { background: #FFFFFF; }
 
 #menu {
   list-style-type: none;
@@ -49,6 +49,8 @@ li:nth-child(odd) { background: #DDEEFF; }
   position: fixed;
   height: 100%;
   overflow: auto;
+  font-size: larger;
+  font-weight:bold;
 }
 
 #menu li {
