@@ -2,10 +2,19 @@
   <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>AbSolute</title>
     <script src="solver.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="absolute.css">
 	</head>
 	<body>
-    <form>
+     <ul id="menu">
+       <li><img alt="me" src="me.jpg"></li>
+       <li><a href="./index.html#">Accueil</a></li>
+       <li><a href="./index.html#Research">Recherche</a></li>
+       <li><a href="./index.html#Software">Logiciels</a></li>
+       <li><a href="./index.html#Teaching">Enseignement</a></li>
+     </ul>
+     <div id="global">
+       <form id="form">
       <fieldset>
         <legend> Options </legend>
         <label for="domain"> Abstract Domain : </label>
@@ -19,7 +28,7 @@
       </fieldset>
       <fieldset>
         <legend> Write you problem here </legend>
-        <textarea id="text" cols="50" rows="40"></textarea>
+        <textarea id="text" cols="50" rows="20"></textarea>
         <label for="problem" > you can also select one of the predefined examples : </label>
         <select id="problem" name="problem">
           <option value="noone"> ... </option>
@@ -28,7 +37,9 @@
         </select>
         <input id="solve" type="button" value="solve">
       </fieldset>
+       </form>
       <canvas id="canvas" width="500" height="500"></canvas>
-    </form>
+
+     </div>
   </body>
 </html>
