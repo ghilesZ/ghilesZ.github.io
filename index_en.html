@@ -7,14 +7,14 @@
 	</head>
  <body>
    <ul id="menu">
-     <li><img alt="me" src="me.jpg"></li>
+     <li><img alt="me" src="img/me.jpg"></li>
      <li><a href="#">Accueil</a></li>
      <li><a href="#Research">Recherche</a></li>
      <li><a href="#Software">Logiciels</a></li>
      <li><a href="#Teaching">Enseignement</a></li>
      <h5>Contact:</h5>
       <div class="card">
-        <img class="cover-image" src="m.png">
+        <img class="cover-image" src="img/m.png">
       </div>
    </ul>
     <div id="global">
@@ -63,7 +63,7 @@
           <a href="https://ghilesz.github.io/">Ghiles Ziat</a>,
           <a href="https://dien.users.greyc.fr">Matthieu Dien</a>,
           Vincent Botbol
-          <a href="cp2021.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="papers/cp2021.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
         <li>
           <div class="title">Constraint-based Verification of Formation Control</div>
@@ -73,7 +73,7 @@
           <a href="https://personnel.isae-supaero.fr/christophe-garion/">Christophe Garion</a>,
           Xavier Thirioux,
           <a href="https://ghilesz.github.io/">Ghiles Ziat</a>,
-          <a href="cdc2021.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="papers/cdc2021.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
         <li>
           <div class="title">Abstract domains for constraint programming with differential equations</div>
@@ -84,7 +84,7 @@
           <a href="https://personnel.isae-supaero.fr/christophe-garion/">Christophe Garion</a>,
           Alexandre Chapoutot,
           Xavier Thirioux
-          <a href="nsad2020.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="papers/nsad2020.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
         <li>
           <div class="title">Combination of Boxes and Polyhedra Abstractions for Constraint Solving</div>
@@ -94,7 +94,7 @@
           <a href="https://www.i3s.unice.fr/~mpelleau/">Marie Pelleau</a>,
           <a href="https://www.normalesup.org/~truchet/">Charlotte Truchet</a>,
           <a href="https://www-apr.lip6.fr/~mine/index.html.fr/">Antoine Miné</a>
-          <a href="nsad2019.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="nsad2019.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
         <li>
           <div class="title">Finding Solutions by Finding Inconsistencies</div>
@@ -103,7 +103,7 @@
           <a href="https://www.i3s.unice.fr/~mpelleau/">Marie Pelleau</a>,
           <a href="https://www.normalesup.org/~truchet/">Charlotte Truchet</a>,
           <a href="https://www-apr.lip6.fr/~mine/index.html.fr/">Antoine Miné</a>,
-          <a href="cp2018.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="papers/cp2018.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
         <li>
           <div class="title">Améliorer la propagation : l'Importance d'être Inconsistant</div>
@@ -112,7 +112,7 @@
           <a href="https://www.i3s.unice.fr/~mpelleau/">Marie Pelleau</a>,
           <a href="https://www.normalesup.org/~truchet/">Charlotte Truchet</a>,
           <a href="https://www-apr.lip6.fr/~mine/index.html.fr/">Antoine Miné</a>
-          <a href="jfpc2017.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="papers/jfpc2017.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
         <li>
           <div class="title">Mixing Polyedra and Boxes Abstract Domain for Constraint Solving</div>
@@ -126,20 +126,30 @@
         <li>
           <div class="title">These de doctorat: A Combination of Abstract Interpretation and Constraint Programming </div>
           <a href="https://ghilesz.github.io/">Ghiles Ziat</a>,
-          <a href="manusctit.pdf"><img alt="paper" src="paper.jpg" width="20" height="20"></a>
+          <a href="papers/manuscrit.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
         </li>
       </ul>
-      <h1>Softwares</h1>
-
-      <p style="width : 700px"> I contribute to the following softwares : </p>
+      <h1 id="Software">Softwares</h1>
+      <p style="width : 700px"> I am maitainer and/or contributor to the following softwares </p>
       <ul>
         <li>
-          <a href="https://github.com/mpelleau/AbSolute">AbSolute</a>
-          (An abstract domain-based constraint solver: <a href="tryit.html">try it</a>)
+          <div class="title"><a href="https://github.com/ghilesZ/Testify">Testify</a></div>
+          Testify is a syntactic extension that features type driven code
+          generation to automatically generate test for your programs.
         </li>
         <li>
-          <a href="https://github.com/ghilesZ/geoml">geoml</a>
-          (a 2D geometry library for OCaml)
+          <div class="title"><a href="https://github.com/mpelleau/AbSolute">AbSolute</a></div>
+          AbSolute is a constraint solver based on abstract domains
+          from the theory of abstract
+          interpretation: <a href="tryit.html"> Essayer</a>
+        </li>
+        <li>
+          <div class=title><a href="https://github.com/ghilesZ/picasso">Picasso</a></div>
+         Picasso is an Abstract element drawing library which provides several ways of drawing abstract element.
+        </li>
+        <li>
+          <div class="title"><a href="https://github.com/ghilesZ/geoml">geoml</a></div>
+          Geoml is 2D geometry library for OCaml. It focuses on euclidean geometry and provides basic types and operations over geometric shapes.
         </li>
       </ul>
       <h1>Teaching</h1>
@@ -164,7 +174,7 @@
         </li>
       </ul>
       <a href="index.html">
-        <img src="french.svg" height="30px" width="40px" />
+        <img src="img/french.svg" height="30px" width="40px" />
       </a>
     </div>
   </body>
