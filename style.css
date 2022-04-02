@@ -6,13 +6,18 @@ body {
 #global{
     width: 50%;
     padding : 5px;
-    background-color:ffffff;
+    background-color:#ffffff;
     margin-left: auto;
     margin-right: auto;
 }
 
 #whoimi{
-    padding : 5px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+}
+
+#news{
     background-color:ffffff;
     margin-left: auto;
     margin-right: auto;
@@ -31,8 +36,8 @@ body {
 }
 
 
-li:nth-child(even) { background: #EFEFFF; }
-li:nth-child(odd) { background: #FFFFFF; }
+ul li:nth-child(even) { background: #EFEFFF; }
+ul li:nth-child(odd) { background: #FFFFFF; }
 
 #menu {
   list-style-type: none;
@@ -88,4 +93,17 @@ li:nth-child(odd) { background: #FFFFFF; }
 
 .card:hover .cover-image{
   filter: blur(0);
+}
+
+
+.blink {
+    animation: blinker 4s linear infinite;
+    color:red;
+    font-weight:bold;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
