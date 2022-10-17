@@ -7,6 +7,9 @@
 	</head>
   <body>
     <ul id="menu">
+      <div id="epitalogo">
+        <img id="epitalogo" alt="epita" src="img/epita.jpg">
+      </div>
       <li><img alt="me" src="img/me.jpg"></li>
       <li><a href="#">Accueil</a></li>
       <li><a href="#Research">Recherche</a></li>
@@ -21,10 +24,10 @@
       <div id="whoimi">
         <h1>Qui suis-je ?</h1>
         <p>
-          Je m'appelle Ghiles Ziat et je suis actuellement post-doctorant à au
-          laboratoire d'Informatique de l'Université de Paris
-          (<a href="https://www.irif.fr/index">IRIF</a>), au sein du
-          groupe Preuves, Programmes et Systèmes.
+          Je m'appelle Ghiles Ziat et je suis enseignant-chercheur à
+          l' (<a href="https://www.epita.fr/">EPITA</a>), au sein
+          du <a href="https://www.lre.epita.fr/">LRE</a> dans
+          l'équipe <a href="https://www.lre.epita.fr/automata/">Automates</a>.
         </p>
 
         <p>
@@ -33,8 +36,13 @@
           au <a href="https://www.isae-supaero.fr/fr/recherche/politiquescientifique/fr/recherche/departements/ingenierie-systemes-complexes/disc">DISC</a>
           sous la supervision
           de <a href="https://personnel.isae-supaero.fr/christophe-garion/">Christophe
-            Garion</a> et Xavier Thirioux. Nous nous sommes intéressés à
-          l'analyse de systèmes hybrides par une approche CP/IA.
+          Garion</a> et Xavier Thirioux. Nous nous sommes intéressés à
+          l'analyse de systèmes hybrides par une approche CP/IA. J'ai
+          ensuite été post-doctorant à au laboratoire d'Informatique
+          de l'Université de Paris
+          (<a href="https://www.irif.fr/index">IRIF</a>), au sein du
+          groupe Preuves, Programmes et Systèmes, où je me suis
+          interessé à l'analyse statique de tests.
         </p>
 
         <p> J'ai fais ma thèse, dans
@@ -51,33 +59,48 @@
           du projet
           ANR <a href="http://www.anr-coverif.fr/">coverif</a>.
         </p>
-        <div id="news">
-        <h4 class="blink">Nouvelles</h4>
-        Je propose en ce moment deux sujets de stage d'informatique
-        niveau L3/M1 à effectuer au sein de
-        l'<a href="https://www.irill.org/">Initiative de Recherche et
-          Innovation sur le Logiciel Libre</a> (IRILL) sur la thématique
-        du le génération automatique de test.  Les deux sujet de
-        stages sont consultables ici:
-        <ol>
-          <li><a href="https://www.irill.org/internships2022//2022/8.html">Analyse
-              d'API pour le guidage du test automatique</a></li>
-          <li><a href="https://www.irill.org/internships2022//2022/9.html">Implantation
-              d'un oracle de test aléatoire</a></li>
-        </ol>
-        Vous pouvez m'écrire un mail si vous êtes intéressés.
-      </div>
+      <!--   <div id="news"> -->
+      <!--   <h4 class="blink">Nouvelles</h4> -->
+      <!--   Je propose en ce moment deux sujets de stage d'informatique -->
+      <!--   niveau L3/M1 à effectuer au sein de -->
+      <!--   l'<a href="https://www.irill.org/">Initiative de Recherche et -->
+      <!--     Innovation sur le Logiciel Libre</a> (IRILL) sur la thématique -->
+      <!--   du le génération automatique de test.  Les deux sujet de -->
+      <!--   stages sont consultables ici: -->
+      <!--   <ol> -->
+      <!--     <li><a href="https://www.irill.org/internships2022//2022/8.html">Analyse -->
+      <!--         d'API pour le guidage du test automatique</a></li> -->
+      <!--     <li><a href="https://www.irill.org/internships2022//2022/9.html">Implantation -->
+      <!--         d'un oracle de test aléatoire</a></li> -->
+      <!--   </ol> -->
+      <!--   Vous pouvez m'écrire un mail si vous êtes intéressés. -->
+      <!-- </div> -->
       </div>
       <div>
         <h1 id="Research">Publications</h1>
         <ul>
-          <li id="pub">
+          <li>
+            <div class="title">Automatic Synthesis of Random
+              Generators for Numerically Constrained Algebraic Recursive Types
+            </div>
+            <div class="conf">Logic-based Program Synthesis and Transformation <a href="https://lopstr2022.webs.upv.es/">(LOPSTR 2022)</a></div>
+            <a href="https://ghilesz.github.io/">Ghiles Ziat</a>,
+            <a href="https://dien.users.greyc.fr">Matthieu Dien</a>,
+            Vincent Botbol,
+            <a href="http://people.rennes.inria.fr/Arnaud.Gotlieb/">Arnaud Gotlieb</a>,
+            Martin Pépin,
+            <a href="http://web4.ensiie.fr/~dubois/">Catherine Dubois</a>
+            <a href="papers/lopstr22.pdf"><img alt="paper"
+            src="img/paper.jpg" width="20" height="20"></a>
+          </li>
+          <li>
             <div class="title">Automated Random Testing of Numerical Constrained Types</div>
             <div class="conf">International Conference on Principles and Practice of Constraint Programming <a href="https://cp2021.a4cp.org/">(CP2021)</a></div>
             <a href="https://ghilesz.github.io/">Ghiles Ziat</a>,
             <a href="https://dien.users.greyc.fr">Matthieu Dien</a>,
             Vincent Botbol
-            <a href="papers/cp2021.pdf"><img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
+            <a href="papers/cp21.pdf">
+              <img alt="paper" src="img/paper.jpg" width="20" height="20"></a>
           </li>
           <li>
             <div class="title">Constraint-based Verification of Formation Control</div>

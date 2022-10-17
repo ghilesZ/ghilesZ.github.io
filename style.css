@@ -24,6 +24,10 @@ body {
     font-size: large;
 }
 
+#epitalogo{
+  width: 100%;
+}
+
 .title{
     font-size: larger;
     font-weight:bolder;
@@ -80,6 +84,7 @@ ul li:nth-child(odd) { background: #FFFFFF; }
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .card .cover-image {
