@@ -18,11 +18,11 @@ body {
 }
 
 .container:nth-of-type(even) {
-    background-color: #b4baff;
+    background-color: #DFFEff;
 }
 
 .container:nth-of-type(odd) {
-    background-color: #ffebd8
+    background-color: #ffFEEF
 }
 
 
